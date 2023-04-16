@@ -19,8 +19,6 @@ class Solution:
             while len(stack)!=0:
                 # put right first
                 tmp_stack = []
-                print(f"stack : {stack}")
-                print(f"right_side : {right_side}")
                 right_side.append(stack[0].val)
                 stack.reverse()
                 while len(stack)!=0:
@@ -29,7 +27,5 @@ class Solution:
                         tmp_stack.append(node.right)
                     if node.left:
                         tmp_stack.append(node.left)
-                print(f"tmp_stack : {tmp_stack}")
-                print(f"reverse tmp_stack : {tmp_stack}")
                 stack = tmp_stack
         return right_side
