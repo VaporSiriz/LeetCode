@@ -14,14 +14,7 @@ class Solution:
         if fnode.val != snode.val:
             return False
         
-        else:
-            if not self.preorder(fnode.left, snode.left):
-                return False
-            if not self.preorder(fnode.right, snode.right):
-                return False
-        
-        return True
-        
+        return self.preorder(fnode.left, snode.left) and self.preorder(fnode.right, snode.right)        
         
     def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
         return self.preorder(p, q)
