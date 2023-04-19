@@ -7,10 +7,8 @@
 class Solution:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         numbers = []
-        nodes = []
         nodes = [root] if root else []
         while len(nodes)!=0:
-            #print(f"{nodes} - {numbers}")
             node = nodes.pop()
             if type(node) == int:
                 numbers.append(node)
