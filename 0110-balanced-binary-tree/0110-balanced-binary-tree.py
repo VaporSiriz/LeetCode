@@ -12,7 +12,7 @@ class Solution:
         rsub = self.check_height(node.right) if node.right else 0
         if rsub==-1:
             return -1
-        print(f"{node.val}: {lsub}-{rsub}")
+        #print(f"{node.val}: {lsub}-{rsub}")
         return max(lsub, rsub) + 1 if abs(lsub-rsub)<=1 else -1
         
     def isBalanced(self, root: Optional[TreeNode]) -> bool:
