@@ -12,6 +12,8 @@ class Solution:
         while count!=0:
             node, depth = nodes.pop()
             count -= 1
+            if depth > min_depth:
+                continue
             if not node.left and not node.right:
                 min_depth = depth if depth < min_depth else min_depth
                 continue
